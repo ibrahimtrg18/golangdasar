@@ -1,0 +1,37 @@
+{{define "form"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="/process" method="post">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Type name here" id="name" name="name" required>
+        <br/>
+
+        <label for="name">Name</label>
+        <input type="text" placeholder="Type name here" id="name" name="message" required>
+
+        <br/>
+        <button type="submit">Print</button>
+    </form>
+</body>
+
+</html>
+{{end}}
+
+{{define "result"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <p>Name : {{.name}}</p>
+    <p>Message : {{.message}}</p>
+</body>
+</html>
+{{end}}
